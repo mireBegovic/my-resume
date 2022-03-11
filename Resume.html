@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!-- ubacivanje linkova za fontove i postavljanjeistih nanaslove h2 h3 h4 h5 h6, promjenjen hover dodano skaliranje
+za linkove, promjenjen background za radno-iskustvo i border radius, male promjene u formi dodavanje border radiusa -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Mirnes's Presentation">
+        <meta name="keywords" content="Mirnes Begovic Web Developing">
+        <meta name="author" content="Mirnes Begovic">
+        <title>Mirnes Begović</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+        <style>
+            *{
+               box-sizing: border-box;
+            }
+            body{
+                background-color: rgb(37, 25, 25);
+                margin: 0;
+            }
+            #glavni{
+                background-color: rgb(37, 25, 25);
+                color:rgb(231, 222, 222);
+                margin: 120px 0 0 0 ;
+                padding: 0;
+                display:grid;
+                grid-template-columns: repeat(3, minmax(100px, auto));
+                grid-template-rows: repeat(7, minmax(30px, auto)); 
+                width: 100%;
+                
+                
+                
+            }
+            #header{
+                background-color: rgba(157, 109, 109, 0.829);
+                grid-column: 1/-1;
+                grid-row: 1/2;
+                /* fixna navigacija*/
+                position: fixed;
+                width: 100%;
+                top: 0;
+                
+
+                justify-content: center;
+            }
+            #navigacija{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            ul, li  {
+                display: inline-block;
+                margin: 10px auto;
+                padding: 5px;
+            }
+            #navigacija a{
+                text-decoration: none;
+                color: rgb(231, 222, 222);
+            }
+            #navigacija a:hover{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-bottom: 2px solid black;
+
+            }
+            #navigacija li:hover{
+                transform: scale(1.2);
+            }
+            
+            
+            #social-media{
+                    display: inline-block;
+                    margin: 0 auto;
+                }
+            #slika{
+                width: 80%;
+                grid-column: 3/4;
+                grid-row: 2/4;
+                margin: 0 auto;
+                
+                
+            }
+            img{
+                display: block;
+                width: 100%;
+                height:auto;
+                margin: 10px auto;
+                
+            }
+            #glavni-naslov{
+                grid-column: 1/3;
+                grid-row: 2/3;
+                justify-self: center;  
+            }
+            h1{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 4vw;
+            }
+            h2, h3, h4, h5, h6{
+                font-family: 'Shadows Into Light', cursive;;
+            }
+              
+                #kratki-opis{
+                    grid-column: 2/3;
+                    grid-row: 3/4;
+                    padding: 5px;
+                    align-self: center;
+                    font-family: 'Times New Roman', Times, serif;
+                    
+                }
+                #obrazovanje{
+                    background-color: rgba(157, 109, 109, 0.103);
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                    padding: 2%;
+                    align-self: center;
+                    border-radius: 10%;
+                    font-family: 'Times New Roman', Times, serif;
+
+                    
+                }
+                #iskustvo{
+                    grid-row:4/5 ;
+                }
+                #radno-iskustvo{
+                    grid-column: 1/4;
+                    grid-row: 5/6;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, minmax(30px, auto));
+                    background-color: rgba(0, 0, 0, 0.192);
+                    padding: 10px;
+                    font-family: 'Times New Roman', Times, serif;
+                    border-radius: 5%;
+                    
+                }
+                #kontakt{
+                    grid-column: 1/4;
+                    grid-row: 6/7;
+                    padding: 20px;
+                    justify-self: center;
+                }
+                label >input{
+                    display: block;
+                    margin: 5px;
+                    border:1px solid transparent;
+                    border-radius: 3%;
+                }
+                label >textarea{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px;
+                    border: 1px solid transparent;
+                    border-radius: 3%;
+                }
+                footer{
+                    grid-column: 1/4;
+                    grid-row: 7/8;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    background-color: rgba(157, 109, 109, 0.829);
+                }
+                
+                    /*Priprema sajta za mobilne uredjaje*/
+                @media (max-width: 600px){
+                    #glavni{
+                display:grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(9, minmax(30px, auto));
+               
+            }
+            #header{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            #navigacija{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+            ul, li  {
+                display: inline-block;
+                margin: 10px auto;
+                padding: 5px;
+            }
+            
+            #social-media{
+                    display: inline-block;
+                    color: rgb(255,255,255);
+                }
+            
+            #glavni-naslov{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            #slika{
+                grid-column: 1/2;
+                grid-row: 3/4;
+                width: 80%;
+                margin: 0 auto;
+            }
+            #kratki-opis{
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+            #obrazovanje{
+                grid-column: 1/2;
+                grid-row: 5/6;
+            }
+            #iskustvo{
+                grid-column: 1/2;
+                grid-row: 6/7;
+                justify-self: center;
+                align-items: center;
+            }
+            #radno-iskustvo{
+                grid-column: 1/2;
+                grid-row: 7/8;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, minmax(20px, auto));
+                
+            }
+            #kontakt{
+                grid-column: 1/2;
+                grid-row: 8/9;
+            }
+            footer{
+                grid-column: 1/2;
+                grid-row: 9/10;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                padding: 3px;;
+            }
+                }
+
+        </style>
+
+    </head>
+    <body>
+        <main id="glavni">
+            <header id="header">
+                <nav id="navigacija">
+                    <ul>
+                        <li><a href="#glavni-naslov">Početna</a></li>
+                        <li><a href="#obrazovanje">Obrazovanje</a></li>
+                        <li><a href="#radno-iskustvo">Radno iskustvo</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                        <ul id="social-media"><li><a href="https://www.youtube.com/channel/UC3J7jNOxAAqCld73leJt4lA" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li><a href="https://www.facebook.com/mirnes.begovic.77" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="https://github.com/mireBegovic" target="_blank">
+                            <ion-icon name="logo-github"></ion-icon></a></li></ul>
+                    </ul>
+                </nav>
+                
+            </header>
+            
+                <div id="glavni-naslov">
+                    <h1 id="glavni-naslov">Moje ime je Mirnes Begović</h1>
+                </div>
+                    <div id="slika"><img src="MirnesBegovicSlika.jpeg" alt="Mire">
+                    
+                        
+                            
+
+                    </div>
+                    <div id="kratki-opis">
+                        <h2>Ukratko o meni</h2>
+                    <p id="kratki-opis">Školovao sam se i odrastao u Tuzli, nakon što me posao vodio od Sarajeva pa sve do Bruges-a ponovo sam se 
+                        vratio u Tuzlu i trenutno zivim tu.<br>
+                        Developer sam koji trenutno nema veliko iskustvo u developingu, ali sam neko ko je nakupio jako puno iskustva
+                        u drugim branšama i mislim da je to moja prednost u odnosu na druge developere, kako bi i vama olakšao i pomogao da 
+                        razvijete svoju web-stranicu ili web-shop. 
+                    </p>
+                     
+                </div>
+                <div id="obrazovanje">
+                    <h2>Obrazovanje</h2>
+                    
+                    <dl>
+                        <dt>Maj 2016</dt>
+                        <dd>Stručni ispit <br>
+                            FMERI, Mostar (Bosna i Hercegovina)</dd>
+                    </dl>
+                    <dl>
+                        <dt>Septembar 2007 - Septembar 2014</dt>
+                        <dd><b>Bachelor Inzenjer Geologije</b><br>
+                            Rudarsko-geološko-građevinski fakultet, Univerzitet u Tuzli, Tuzla (Bosna i Hercegovina)</dd>
+                    </dl>
+                    <dl>
+                        <dt>Septembar 2003- Juni 2007</dt>
+                        <dd><b>Geološki tehničar</b> <br>
+                            Srednja Rudarsko-geološka škola, Tuzla (Bosna i Hercegovina)</dd>
+                    </dl>
+                </div>
+                 <h2 id="iskustvo">Radno iskustvo</h2>
+                <div id="radno-iskustvo"> 
+                    <dl>
+                        <dt>July 2018 - Februar 2022</dt>
+                        <dd>Arst Konstrukcije doo Maribor, Slovenija<br>
+                            Radnik u proizvodnji, vodja tima u proizvodnji prenapregnutih elemenata, lokacija rada Bruges Belgija<br>
+                            -Organizavija smjena i pracenje plana<br>
+                            -Organizovanje smjestaja i prevoza<br>
+                            -Organizovanje prevoza za odlaske kuci tokom kratkih i kolektivnih odmora</dd>
+                    
+                    </dl>
+                    <dl>
+                        <dt>Februar 2018 - Maj 2018</dt>
+                        <dd>GEA doo Tuzla<br>
+                            Geolog saradnik<br>
+                            -Praćenje eksploatacije na površinskim kopovima<br>
+                            -Izrada geološke karte<br>
+                            -Vođenje evidencije i izrada knjiga o rezervama čvrtih mineralnih sirovina<br>
+                            -Praćenje eksploatacije na temalnim vodozahvatima<br>
+                            -In-situ analiza termalne vode<br>
+                            -Izrada knjige o rezervama mineralne sirovine</dd>
+                    </dl>
+                    <dl>
+                        <dt>Decembar 2016 - Februar 2018</dt>
+                        <dd>Winner Project doo Sarajevo<br>
+                            Geolog projektant<br>
+                            -organizovanje i vođenje radilišta<br>
+                            -inženjerskogeološko kartiranje terena<br>
+                            -litološko kartiranje bušotine, in-situ opiti i uzorkovanje<br>
+                            -laboratorijska obrada uzoraka, analiza i interpretacija podataka
+                            </dd>
+                    </dl>
+                    <dl>
+                        <dt>Septembar 2016 - Novembar 2016</dt>
+                        <dd>GEA doo Tuzla<br>
+                            Geolog saradnik<br>
+                            -Praćenje eksploatacije na površinskim kopovima<br>
+                            -Izrada geološke karte<br>
+                            -vođenje evidencije i izrada knjige o rezervama čvrstih mineralnih sirovina<br>
+                            -Praćenje eksploatacije na temalnim <br>
+                            -In-situ analiza termalne vode<br>
+                            -Izrada knjige o rezervama mineralne sirovine</dd>
+                    </dl>
+                    <dl>
+                        <dt>Novembar 2014 - Novembar 2015</dt>
+                        <dd>E&P doo Zavidovići<br>
+                            Geolog pripravnik (volonter) -kartiranje površinskog kopa<br>
+                            -kontrola kvaliteta mineralne sirovine<br>
+                            -izrada i ažuriranje geološke karte<br>
+                            -ažuriranje i izrada knjige rezervi čvrstih mineralnih sirovina</dd>
+                    </dl>
+                </div>
+                
+                
+                <div id="kontakt">
+
+                    <form action="">
+                        <label for="ime">Ime
+                            <input type="text" id="ime" name="kontakt-forma" placeholder="Vaše ime" required>
+                        </label>
+                        <label for="email">Email
+                            <input type="email" id="email" name="kontakt-forma" placeholder="Email" required>
+                        </label>
+                        <label for="telefon">Telefon
+                            <input type="tel" id="telefon" name="kontakt-forma" placeholder="Broj telefona (neobavezno)">
+                        </label>
+                        <label>Vaše pitanje
+
+                        <textarea rows="4" cols="30" placeholder="Vaše pitanje"></textarea><br>
+                    </label>
+
+                        <button type="submit">Pošalji</button>
+                    </form>
+
+                </div>
+
+
+
+            </div>
+            <footer>
+                <p>Mirnes Begović</p>
+                <p>Adresa: Amalije Lebeničnik Oaza A2 III/403</p>
+                <p>Email: mirebegovic@gmail.com</p>
+                <p>Telefon: 387 (0)62 974 129</p>
+              
+            </footer>
+        </main>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
